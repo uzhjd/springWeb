@@ -1,9 +1,9 @@
-package com.web.springbootcommunityweb.resolver;
+package com.web.resolver;
 
-import com.web.springbootcommunityweb.annotation.SocialUser;
-import com.web.springbootcommunityweb.domain.User;
-import com.web.springbootcommunityweb.domain.enums.SocialType;
-import com.web.springbootcommunityweb.repository.UserRepository;
+import com.web.annotation.SocialUser;
+import com.web.domain.User;
+import com.web.domain.enums.SocialType;
+import com.web.repository.UserRepository;
 
 import org.springframework.core.MethodParameter;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -25,9 +25,9 @@ import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
-import static com.web.springbootcommunityweb.domain.enums.SocialType.FACEBOOK;
-import static com.web.springbootcommunityweb.domain.enums.SocialType.GOOGLE;
-import static com.web.springbootcommunityweb.domain.enums.SocialType.KAKAO;
+import static com.web.domain.enums.SocialType.FACEBOOK;
+import static com.web.domain.enums.SocialType.GOOGLE;
+import static com.web.domain.enums.SocialType.KAKAO;
 
 @Component
 public class UserArgumentResolver implements HandlerMethodArgumentResolver {

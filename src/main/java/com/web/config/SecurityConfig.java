@@ -1,6 +1,6 @@
-package com.web.springbootcommunityweb.config;
+package com.web.config;
 
-import com.web.springbootcommunityweb.oauth.CustomOAuth2Provider;
+import com.web.oauth.CustomOAuth2Provider;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.security.oauth2.client.OAuth2ClientProperties;
@@ -21,9 +21,9 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-import static com.web.springbootcommunityweb.domain.enums.SocialType.FACEBOOK;
-import static com.web.springbootcommunityweb.domain.enums.SocialType.GOOGLE;
-import static com.web.springbootcommunityweb.domain.enums.SocialType.KAKAO;
+import static com.web.domain.enums.SocialType.FACEBOOK;
+import static com.web.domain.enums.SocialType.GOOGLE;
+import static com.web.domain.enums.SocialType.KAKAO;
 
 @Configuration
 @EnableWebSecurity

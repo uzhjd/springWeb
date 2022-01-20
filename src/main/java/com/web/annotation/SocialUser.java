@@ -1,4 +1,4 @@
-package com.web.springbootcommunityweb.annotation;
+package com.web.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

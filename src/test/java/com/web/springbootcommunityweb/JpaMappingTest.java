@@ -1,18 +1,16 @@
 package com.web.springbootcommunityweb;
 
-import com.web.springbootcommunityweb.domain.Board;
-import com.web.springbootcommunityweb.domain.User;
-import com.web.springbootcommunityweb.domain.enums.BoardType;
-import com.web.springbootcommunityweb.repository.BoardRepository;
-import com.web.springbootcommunityweb.repository.UserRepository;
+import com.web.domain.Board;
+import com.web.domain.User;
+import com.web.domain.enums.BoardType;
+import com.web.repository.BoardRepository;
+import com.web.repository.UserRepository;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.LocalDateTime;

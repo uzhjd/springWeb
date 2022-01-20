@@ -1,11 +1,11 @@
 package com.web;
 
-import com.web.springbootcommunityweb.domain.Board;
-import com.web.springbootcommunityweb.domain.User;
-import com.web.springbootcommunityweb.domain.enums.BoardType;
-import com.web.springbootcommunityweb.repository.BoardRepository;
-import com.web.springbootcommunityweb.repository.UserRepository;
-import com.web.springbootcommunityweb.resolver.UserArgumentResolver;
+import com.web.domain.Board;
+import com.web.domain.User;
+import com.web.domain.enums.BoardType;
+import com.web.repository.BoardRepository;
+import com.web.repository.UserRepository;
+import com.web.resolver.UserArgumentResolver;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

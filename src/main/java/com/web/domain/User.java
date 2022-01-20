@@ -1,7 +1,6 @@
-package com.web.springbootcommunityweb.domain;
+package com.web.domain;
 
-import com.web.springbootcommunityweb.domain.enums.BoardType;
-
+import com.web.domain.enums.SocialType;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -10,23 +9,19 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-
-
 @Getter
 @NoArgsConstructor
 @Entity
 @Table
-public class Board implements Serializable {
+public class User implements Serializable {
 
     @Id
     @Column
@@ -34,17 +29,20 @@ public class Board implements Serializable {
     private Long idx;
 
     @Column
-    private String title;
+    private String name;
 
     @Column
-    private String subTitle;
+    private String password;
 
     @Column
-    private String content;
+    private String email;
+
+    @Column
+    private String pincipal;
 
     @Column
     @Enumerated(EnumType.STRING)
-    private BoardType boardType;
+    private SocialType socialType;
 
     @Column
     private LocalDateTime createdDate;
@@ -52,17 +50,14 @@ public class Board implements Serializable {
     @Column
     private LocalDateTime updatedDate;
 
-    @OneToOne(fetch= FetchType.LAZY)
-    private User user;
-
     @Builder
-    public Board(String title, String subTitle, String content, BoardType boardType, LocalDateTime createdDate, LocalDateTime updatedDate, User user) {
-        this.title = title;
-        this.subTitle = subTitle;
-        this.content = content;
-        this.boardType = boardType;
+    public User(String name, String password, String email, String pincipal, SocialType socialType, LocalDateTime createdDate, LocalDateTime updatedDate) {
+        this.name = name;
+        this.password = password;
+        this.email = email;
+        this.pincipal = pincipal;
+        this.socialType = socialType;
         this.createdDate = createdDate;
         this.updatedDate = updatedDate;
-        this.user = user;
     }
 }

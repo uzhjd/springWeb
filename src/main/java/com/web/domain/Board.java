@@ -1,6 +1,7 @@
-package com.web.springbootcommunityweb.domain;
+package com.web.domain;
 
-import com.web.springbootcommunityweb.domain.enums.SocialType;
+import com.web.domain.enums.BoardType;
+
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -9,19 +10,23 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+
+
 @Getter
 @NoArgsConstructor
 @Entity
 @Table
-public class User implements Serializable {
+public class Board implements Serializable {
 
     @Id
     @Column
@@ -29,20 +34,17 @@ public class User implements Serializable {
     private Long idx;
 
     @Column
-    private String name;
+    private String title;
 
     @Column
-    private String password;
+    private String subTitle;
 
     @Column
-    private String email;
-
-    @Column
-    private String pincipal;
+    private String content;
 
     @Column
     @Enumerated(EnumType.STRING)
-    private SocialType socialType;
+    private BoardType boardType;
 
     @Column
     private LocalDateTime createdDate;
@@ -50,14 +52,17 @@ public class User implements Serializable {
     @Column
     private LocalDateTime updatedDate;
 
+    @OneToOne(fetch= FetchType.LAZY)
+    private User user;
+
     @Builder
-    public User(String name, String password, String email, String pincipal, SocialType socialType, LocalDateTime createdDate, LocalDateTime updatedDate) {
-        this.name = name;
-        this.password = password;
-        this.email = email;
-        this.pincipal = pincipal;
-        this.socialType = socialType;
+    public Board(String title, String subTitle, String content, BoardType boardType, LocalDateTime createdDate, LocalDateTime updatedDate, User user) {
+        this.title = title;
+        this.subTitle = subTitle;
+        this.content = content;
+        this.boardType = boardType;
         this.createdDate = createdDate;
         this.updatedDate = updatedDate;
+        this.user = user;
     }
 }

@@ -1,7 +1,7 @@
-package com.web.springbootcommunityweb.service;
+package com.web.service;
 
-import com.web.springbootcommunityweb.domain.Board;
-import com.web.springbootcommunityweb.repository.BoardRepository;
+import com.web.domain.Board;
+import com.web.repository.BoardRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

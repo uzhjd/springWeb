@@ -1,4 +1,4 @@
-package com.web.springbootcommunityweb.domain.enums;
+package com.web.domain.enums;
 
 public enum SocialType {
     FACEBOOK("facebook"),
