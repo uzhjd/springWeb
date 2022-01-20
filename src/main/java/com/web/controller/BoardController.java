@@ -1,5 +1,7 @@
 package com.web.controller;
 
+import com.web.annotation.SocialUser;
+import com.web.domain.User;
 import com.web.service.BoardService;
 
 import org.springframework.data.domain.Pageable;
@@ -10,12 +12,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
-
 @Controller
 @RequestMapping("/board")
 public class BoardController {
-    //@See https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-spring-beans-and-dependency-injection.html
     private final BoardService boardService;
 
     public BoardController(BoardService boardService) {
@@ -33,5 +32,4 @@ public class BoardController {
         model.addAttribute("boardList", boardService.findBoardList(pageable));
         return "/board/list";
     }
-
 }
