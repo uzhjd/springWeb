@@ -16,12 +16,12 @@ spring:
       client:
         registration:
           google:
-            client-id: "1bc6db2c36de23d7fe05e5c16b4ada36"
-            client-secret: "1bc6db2c36de23d7fe05e5c16b4ada36"
+            client-id: "f2660f96ab40fbc7780e20df0e926310"
+            client-secret: "f2660f96ab40fbc7780e20df0e926310"
           facebook:
-            client-id: "1bc6db2c36de23d7fe05e5c16b4ada36"
-            client-secret: "1bc6db2c36de23d7fe05e5c16b4ada36"
+            client-id: "f2660f96ab40fbc7780e20df0e926310"
+            client-secret: "f2660f96ab40fbc7780e20df0e926310"
 custom:
   oauth2:
     kakao:
-      client-id: "1bc6db2c36de23d7fe05e5c16b4ada36"
+      client-id: "f2660f96ab40fbc7780e20df0e926310"

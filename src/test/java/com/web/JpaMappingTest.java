@@ -1,4 +1,4 @@
-package com.web.springbootcommunityweb;
+package com.web;
 
 import com.web.domain.Board;
 import com.web.domain.User;
