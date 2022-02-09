@@ -24,16 +24,16 @@ repositories {
 
 dependencies {
     implementation 'org.junit.jupiter:junit-jupiter:5.7.0'
-    compile('org.springframework.security:spring-security-oauth2-client')
-    compile('org.springframework.security:spring-security-oauth2-jose')
-    compile('org.springframework.boot:spring-boot-starter-security')
-    compile('org.springframework.boot:spring-boot-starter-web')
-    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
-    compile('org.springframework.boot:spring-boot-starter-data-jpa')
-    compile('com.h2database:h2')
+    implementation('org.springframework.security:spring-security-oauth2-client')
+    implementation('org.springframework.security:spring-security-oauth2-jose')
+    implementation('org.springframework.boot:spring-boot-starter-security')
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+    implementation('com.h2database:h2')
 
-    //runtime('mysql:mysql-connector-java')
-    runtime('org.springframework.boot:spring-boot-devtools')
+    runtimeOnly('mysql:mysql-connector-java')
+    runtimeOnly('org.springframework.boot:spring-boot-devtools')
     compileOnly('org.projectlombok:lombok')
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompileOnly('org.springframework.boot:spring-boot-starter-test')
 }

@@ -1,14 +1,19 @@
 spring:
-  jpa:
-    hibernate:
-      ddl-auto: create
-  h2:
-    console:
-      enabled: true
-      path: /console
-  devtools:
-    livereload:
-      enabled: true
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/gdsc
+    username: root
+    password: dbwjddlRj
+    driver-class-name: com.mysql.jdbc.Driver
+jpa:
+  hibernate:
+    ddl-auto: create
+h2:
+  console:
+    enabled: true
+    path: /console
+devtools:
+  livereload:
+    enabled: true
   thymeleaf:
     cache: false
   security:
